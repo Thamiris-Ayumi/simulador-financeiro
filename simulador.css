@@ -1,0 +1,45 @@
+body{
+    text-align: center;
+    background-color: rgba(47, 203, 91, 0.66);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    padding: 25px;
+    border-bottom: 2px solid #020202;
+}
+
+.container {
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h2 {
+    color: #000000;
+    font-weight: 800;
+    justify-content: space-between;
+}
+
+#button {
+    color: rgb(244, 248, 246);
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(20, 81, 30);
+    transition: 0.3s linear;
+}
+
+#button:hover{
+    cursor: pointer;
+    background-color: rgb(20, 101, 65);
+    transition: 0.3s linear;
+}
+

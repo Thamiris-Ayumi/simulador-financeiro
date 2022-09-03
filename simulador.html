@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="simulador.css">
+
+    <title>Simulador Financeiro CTR</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="container">
+            <h1>CONTROLE DE TEMPERTURA PARA RÉPTEIS</h1>
+            <div class="navbar"></div>
+        </div>
+   </div> 
+
+    <h2>Simulador Financeiro</h2> <br><br>
+
+    Investimento inicial: <input id="in_valor"> <br><br>
+    Quantidade de ovos na incubadora: <input id="in_qtd"> <br><br>
+    Quantidade de ovos perdidos: <input id="in_perdidos"> <br><br>
+
+    <button id="button" onclick="calcular()">Calcular prejuízo</button>
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function calcular() {
+        var investimento = Number(in_valor.value)
+        var incubadora = Number(in_qtd.value)
+        var perdidos = Number(in_perdidos.value)
+        var prejuizo = (investimento / incubadora) * perdidos
+
+        
+        if (prejuizo <= 0) {
+            div_resultado.innerHTML = `<div style = "color: blue"><b>Sua empresa não teve nenhum prejuízo significativo este mês, mas conheça a nossa empresa e nossos serviços!<b></div>`
+        } else {
+        div_resultado.innerHTML = `<div style = "color: red"><b>Sua empresa obteve um prejuízo de R$ ${prejuizo} conheça os nossos serviços prestados para evitar perdas futuras!<b></div>` 
+        }
+    }
+        
+</script>
